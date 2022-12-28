@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+=======================================================================================
+Project Setup And Dependecies - By Avaneesh Mishra 27th December 2022
+1) To Create new Angular Project, run below command:
+ng new <Project-Name>
+
+2) To install angular material, run below command:
+$ npm install --save @angular/material @angular/cdk @angular/animations
+
+3) To install angular bootstrap jquery and popper, run below command:
+$ npm install --save bootstrap jquery popper.js
