@@ -36,3 +36,6 @@ $ npm install --save @angular/material @angular/cdk @angular/animations
 
 3) To install angular bootstrap jquery and popper, run below command:
 $ npm install --save bootstrap jquery popper.js
+  
+4) To install moment, run below command:
+$ npm install moment --save
