@@ -5,6 +5,8 @@ import { TemplatesRoutingModule } from './templates-routing.module';
 import { TemplatesComponent } from './templates.component';
 import { DialogCreateResourceComponent } from './dialog-create-resource/dialog-create-resource.component';
 import { DialogPostCommentsComponent } from './dialog-post-comments/dialog-post-comments.component';
+import { AngularMaterialModule } from '../shared/AngularMaterial.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { DialogPostCommentsComponent } from './dialog-post-comments/dialog-post-
   ],
   imports: [
     CommonModule,
-    TemplatesRoutingModule
+    TemplatesRoutingModule,
+    AngularMaterialModule,
+    SharedModule,
   ]
 })
 export class TemplatesModule { }

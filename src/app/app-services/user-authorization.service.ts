@@ -8,11 +8,6 @@ import { WebApiService } from '../web-api.service';
 })
 export class UserAuthorizationService extends WebApiService{
 
-  constructor(protected http: HttpClient) {
-    super(http)
-  }
-
-
   getAppConfigData(apiURL:string, httpParams?: HttpParams): Observable<any[]> {
     return this.baseHttpGetRequest(apiURL, httpParams)
   }

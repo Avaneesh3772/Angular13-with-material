@@ -7,6 +7,8 @@ import { MonthlyComponent } from './monthly/monthly.component';
 import { QuarterlyComponent } from './quarterly/quarterly.component';
 import { RoleAssignmentComponent } from './role-assignment/role-assignment.component';
 import { RoleDefinitionComponent } from './role-definition/role-definition.component';
+import { AngularMaterialModule } from '../shared/AngularMaterial.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { RoleDefinitionComponent } from './role-definition/role-definition.compo
   ],
   imports: [
     CommonModule,
-    RoleRoutingModule
+    RoleRoutingModule,
+    AngularMaterialModule,
+    SharedModule
   ]
 })
 export class RoleModule { }

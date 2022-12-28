@@ -8,10 +8,7 @@ import { CommentList, PostList } from './template.models';
   providedIn: 'root'
 })
 export class TemplatesService extends WebApiService{
-
-  constructor(protected http: HttpClient) {
-    super(http)
-  }
+  
 
   getAllTemplateData(apiURL: string, httpParams?: HttpParams): Observable<PostList[]> {
       return this.baseHttpGetRequest(apiURL, httpParams);

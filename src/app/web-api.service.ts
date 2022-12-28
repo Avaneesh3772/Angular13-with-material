@@ -18,7 +18,7 @@ export class WebApiService {
                       .pipe(catchError(this.errorHandler));
   }
 
-  baseHttpPostRequest(apiURL: string, body, httpParams?: HttpParams): Observable<any> {
+  baseHttpPostRequest(apiURL: string, body: any, httpParams?: HttpParams): Observable<any> {
     let httpHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
     });
@@ -27,7 +27,7 @@ export class WebApiService {
                     .pipe(catchError(this.errorHandler));
   }
 
-  baseHttpPutRequest(apiURL: string, body, httpParams?: HttpParams): Observable<any> {
+  baseHttpPutRequest(apiURL: string, body: any, httpParams?: HttpParams): Observable<any> {
     let httpHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
     });

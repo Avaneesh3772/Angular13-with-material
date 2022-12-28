@@ -19,7 +19,7 @@ export class CreatePostModel {
   public body;
   public userId;
   
-  constructor(titleValue, bodyValue, userIdValue ) {
+  constructor(titleValue: string, bodyValue: string, userIdValue: number ) {
       this.title = titleValue;
       this.body = bodyValue;
       this.userId = userIdValue;

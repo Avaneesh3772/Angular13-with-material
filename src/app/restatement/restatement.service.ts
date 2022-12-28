@@ -10,9 +10,6 @@ import { WebApiService } from '../web-api.service';
 })
 export class RestatementService extends WebApiService{
 
-  constructor(protected http: HttpClient) {
-    super(http)
-  }
 
   getCommentsList(apiURL:string, httpParams?: HttpParams): Observable<CommentsList[]> {
     return this.baseHttpGetRequest(apiURL, httpParams)

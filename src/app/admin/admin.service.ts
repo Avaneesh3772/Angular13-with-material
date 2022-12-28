@@ -7,11 +7,7 @@ import { TemplateDetails } from './admin.models';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService extends WebApiService{
-
-  constructor(protected http: HttpClient) {
-    super(http)
-  }
+export class AdminService extends WebApiService{ 
 
   getUsersList(apiURL:string, httpParams?: HttpParams): Observable<TemplateDetails[]> {
     return this.baseHttpGetRequest(apiURL, httpParams)

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppCommonService } from 'src/app/app-services/app-common.service';
+import { DateUtils } from 'src/app/app-utilities/app.utilities';
+import { TemplateList } from '../role.models';
 
 @Component({
   selector: 'app-monthly',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonthlyComponent implements OnInit {
 
-  constructor() { }
+  @Input() public monthlyTemplateList: TemplateList[] = [];
+  public templateName: string = '';
 
-  ngOnInit(): void {
+  constructor(private appCommonService: AppCommonService) { }
+
+  ngOnInit() {
+    this.templateName = this.monthlyTemplateList[0].template;
+  }
+
+  checkStatus(status: string) {
+    return this.appCommonService.getColorForStatus(status);
+  }
+
+  dateConvert(date: string) {
+    return DateUtils.getUTCFormatTime(date);
   }
 
 }
