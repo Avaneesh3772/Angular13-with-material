@@ -27,7 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 =======================================================================================
-Project Setup And Dependecies - By Avaneesh Mishra 27th December 2022
+**Project Setup And Dependecies - By Avaneesh Mishra 27th December 2022**
+
 1) To Create new Angular Project, run below command:
 ng new <Project-Name>
 
@@ -39,3 +40,11 @@ $ npm install --save bootstrap jquery popper.js
   
 4) To install moment, run below command:
 $ npm install moment --save
+  
+=======================================================================================
+ ** Push Codebase to Github - By Avaneesh Mishra 27th December 2022**
+  - First make Git Repositery in GitHub
+  - Then Add, commit your code chnages
+  - Then run below command:
+    git remote add origin https://github.com/Avaneesh3772/Angular13-with-material.git
+  - Then git push -u origin master
