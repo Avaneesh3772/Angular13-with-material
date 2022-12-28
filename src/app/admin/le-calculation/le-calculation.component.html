@@ -9,18 +9,18 @@
         <input type="text" id="name" formControlName="userName">
         <label class="smallFont"> {{charLength}} characters entered</label>
         <div *ngIf="EmpName.touched && EmpName.errors" class="error-messages">
-            <p *ngIf="EmpName.errors?.required">This is a required field.</p>
-            <p *ngIf="EmpName.errors?.minlength">Minimum 3 characters</p>
-            <p *ngIf="EmpName.errors?.maxlength">Maximum 8 characters</p>
-            <p *ngIf="EmpName.errors?.forbiddenName">{{EmpName.errors.forbiddenName}} Username not allowed</p>
+            <p *ngIf="EmpName.errors && EmpName.errors['required']">This is a required field.</p>
+            <p *ngIf="EmpName.errors && EmpName.errors['minlength']">Minimum 3 characters</p>
+            <p *ngIf="EmpName.errors && EmpName.errors['maxlength']">Maximum 8 characters</p>
+            <p *ngIf="EmpName.errors && EmpName.errors['forbiddenName']">{{EmpName.errors['forbiddenName']}} Username not allowed</p>
         </div>
     </div>
     <div class="form-container" [class.error]="EmpAge.touched && EmpAge.errors">
         <label for="Age" class="labelName">Your Age: </label>
         <input type="number" id="age" formControlName="userAge">
         <div *ngIf="EmpAge.touched && EmpAge.errors" class="error-messages">
-            <p *ngIf="EmpAge.errors?.required">This is a required field.</p>           
-            <p *ngIf="EmpAge.errors?.ageMismatch">Age should be between 18 and 45.</p>
+            <p *ngIf="EmpAge.errors && EmpAge.errors['required']">This is a required field.</p>           
+            <p *ngIf="EmpAge.errors && EmpAge.errors['ageMismatch']">Age should be between 18 and 45.</p>
         </div>
     </div>
     <div class="form-container" [class.error]="EmpPassword.touched && EmpPassword.errors">
@@ -28,7 +28,7 @@
       <input type="password" id="password" formControlName="password">
 
       <div *ngIf="EmpPassword.touched && EmpPassword.errors" class="error-messages">
-        <p *ngIf="EmpPassword.errors?.required">This is a required field.</p>
+        <p *ngIf="EmpPassword.errors['required']">This is a required field.</p>
       </div>
    </div>
 
@@ -37,9 +37,9 @@
     <input type="password" id="confirmPassword" formControlName="confirmPassword">
 
     <div *ngIf="EmpConfirmPassword.touched && EmpConfirmPassword.errors" class="error-messages">
-      <p *ngIf="EmpConfirmPassword.errors?.required">This is a required field.</p>
+      <p *ngIf="EmpConfirmPassword.errors['required']">This is a required field.</p>
     </div>
-    <div *ngIf="employeeForm.errors && employeeForm.errors.misMatch" class="error-messages">
+    <div *ngIf="employeeForm.errors && employeeForm.errors['misMatch']" class="error-messages">
      <p>Password and confirm password should match</p>
      </div>
    </div>
@@ -55,7 +55,7 @@
       <mat-datepicker #myDatePicker></mat-datepicker>
     </mat-form-field>
     <div *ngIf="EmpJoiningDate.touched && EmpJoiningDate.errors" class="error-messages">
-      <p *ngIf="EmpJoiningDate.errors?.required">This is a required field.</p>
+      <p *ngIf="EmpJoiningDate.errors['required']">This is a required field.</p>
     </div>
    </div>
   </fieldset>
@@ -82,9 +82,9 @@
           <input type="email" id="email"  formControlName="userEmail">
 
           <div *ngIf="EmpEmail.touched && EmpEmail.errors" class="error-messages">
-            <p *ngIf="EmpEmail.errors?.required">This is a required field.</p>
-            <p *ngIf="EmpEmail.errors?.email">This is not valid email.</p>
-            <p *ngIf="EmpEmail.errors?.pattern">This is not valid pattern.</p>
+            <p *ngIf="EmpEmail.errors && EmpEmail.errors['required']">This is a required field.</p>
+            <p *ngIf="EmpEmail.errors && EmpEmail.errors['email']">This is not valid email.</p>
+            <p *ngIf="EmpEmail.errors && EmpEmail.errors['pattern']">This is not valid pattern.</p>
           </div>
       </div>
    </fieldset>
@@ -95,15 +95,15 @@
                 <input type="text" id="skills" formControlName="userSkills">
 
                 <div *ngIf="EmpSkills.touched && EmpSkills.errors"  class="error-messages">
-                  <p *ngIf="EmpSkills.errors?.required">This is a required field.</p>
+                  <p *ngIf="EmpSkills.errors && EmpSkills.errors['required']">This is a required field.</p>
                 </div>
             </div>
             <div class="form-container"  [class.error]="EmpExperience.touched && EmpExperience.errors">
                 <label for="experience"  class="labelName">Experience in Years: </label>
                 <input type="text" id="experience" formControlName="userExperience">
                 <div *ngIf="EmpExperience.touched && EmpExperience.errors" class="error-messages">
-                  <p *ngIf="EmpExperience.errors?.required">This is a required field.</p>
-                  <p *ngIf="EmpExperience.errors?.pattern">Please enter only numbers.</p>
+                  <p *ngIf="EmpExperience.errors && EmpExperience.errors['required']">This is a required field.</p>
+                  <p *ngIf="EmpExperience.errors && EmpExperience.errors['pattern']">Please enter only numbers.</p>
                 </div>
             </div>
             <div class="form-container"  [class.error]="EmpProficiency.touched && EmpProficiency.errors">
@@ -114,7 +114,7 @@
                 </select>
 
                 <div *ngIf="EmpProficiency.touched && EmpProficiency.errors" class="error-messages">
-                  <p *ngIf="EmpProficiency.errors?.required">This is a required field.</p>
+                  <p *ngIf="EmpProficiency.errors['required']">This is a required field.</p>
                 </div>
             </div>
     </fieldset>
@@ -126,12 +126,12 @@
                   <div class="flex-items">
                     <label for="Qualification"  class="labelName">Qualification: </label>
                     <input type="text" id="qualification" formControlName="userQualification">
-                    <div *ngIf="Qualification.controls[i].get('userQualification').touched &&
-                    Qualification.controls[i].get('userQualification').errors" class="error-messages">
-                    <p *ngIf="Qualification.controls[i].get('userQualification').errors?.required">
+                    <div *ngIf="Qualification.controls[i].get('userQualification')?.touched &&
+                    Qualification.controls[i].get('userQualification')?.errors" class="error-messages">
+                    <p *ngIf="Qualification.controls[i].get('userQualification')?.errors?.['required']">
                       This is a required field.
                     </p>
-                    <p *ngIf="Qualification.controls[i].get('userQualification').errors?.minlength">
+                    <p *ngIf="Qualification.controls[i].get('userQualification')?.errors?.['minlength']">
                       Minimum 3 characters.
                     </p>
                     </div>
@@ -140,12 +140,12 @@
                   <div class="flex-items">
                     <label for="university"  class="labelName">Institite/University: </label>
                     <input type="text" id="university" formControlName="userUniversity">
-                    <div *ngIf="Qualification.controls[i].get('userUniversity').touched &&
-                    Qualification.controls[i].get('userUniversity').errors" class="error-messages">
-                    <p *ngIf="Qualification.controls[i].get('userUniversity').errors?.required">
+                    <div *ngIf="Qualification.controls[i].get('userUniversity')?.touched &&
+                    Qualification.controls[i].get('userUniversity')?.errors" class="error-messages">
+                    <p *ngIf="Qualification.controls[i].get('userUniversity')?.errors?.['required']">
                       This is a required field.
                     </p>
-                    <p *ngIf="Qualification.controls[i].get('userUniversity').errors?.minlength">
+                    <p *ngIf="Qualification.controls[i].get('userUniversity')?.errors?.['minlength']">
                       Minimum 5 characters.
                     </p>
                     </div>

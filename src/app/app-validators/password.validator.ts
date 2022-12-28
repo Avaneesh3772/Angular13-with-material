@@ -4,7 +4,7 @@ export function PasswordValidator(control: AbstractControl): {[key:string] : any
     const passwordField = control.get('password');
     const confirmPasswordField = control.get('confirmPassword');
 
-    return (passwordField.value && confirmPasswordField.value
+    return (passwordField?.value && confirmPasswordField?.value
                                 && passwordField.value !== confirmPasswordField.value) ? { 'misMatch': true } : null;
 
 

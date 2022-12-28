@@ -1,3 +1,4 @@
+import { ComponentType } from '@angular/cdk/portal';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { statusType } from '../app-constants/app.constants';
@@ -23,7 +24,7 @@ export class AppCommonService {
     return color;
   }
 
-  openNotAuthorizedDialogBox(dialogComponentName) {
+  openNotAuthorizedDialogBox(dialogComponentName: ComponentType<unknown>) {
     const dialogRef = this.dialog.open(dialogComponentName, {
       height: '400px',
       width: '400px',
