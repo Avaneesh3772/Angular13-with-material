@@ -6,6 +6,8 @@ import { AdminComponent } from './admin.component';
 import { CloseQuarterComponent } from './close-quarter/close-quarter.component';
 import { LeCalculationComponent } from './le-calculation/le-calculation.component';
 import { RoundingModelCalculationComponent } from './rounding-model-calculation/rounding-model-calculation.component';
+import { AngularMaterialModule } from '../shared/AngularMaterial.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { RoundingModelCalculationComponent } from './rounding-model-calculation/
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    AngularMaterialModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

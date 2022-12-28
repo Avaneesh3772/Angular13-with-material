@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DialogUserinfoComponent } from './dialog-userinfo/dialog-userinfo.component';
+import { AngularMaterialModule } from '../shared/AngularMaterial.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { DialogUserinfoComponent } from './dialog-userinfo/dialog-userinfo.compo
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    AngularMaterialModule,
+    SharedModule,
   ]
 })
 export class DashboardModule { }
