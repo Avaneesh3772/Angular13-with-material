@@ -6,7 +6,7 @@ import { RoleGuard } from './app-guard/role.guard';
 import { AdminGuard } from './app-guard/admin.guard';
 import { TemplateGuard } from './app-guard/template.guard';
 import { DashboardGuard } from './app-guard/dashboard.guard';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -14,41 +14,44 @@ const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full'
   },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
-    canLoad: [DashboardGuard]
-  },
-  {
-    path: 'templates',
-    loadChildren: () => import('./templates/templates.module').then(m => m.TemplatesModule),
-    canLoad: [TemplateGuard]
-  },
-  {
-    path: 'admin',
+  { 
+    path: 'admin', 
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
     canLoad: [AdminGuard]
   },
-  {
-    path: 'role',
+    
+  { 
+    path: 'dashboard', 
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    canLoad: [DashboardGuard]
+  },
+    
+  { 
+    path: 'restatement', 
+    loadChildren: () => import('./restatement/restatement.module').then(m => m.RestatementModule),
+    canLoad: [RestatementGuard]
+  },
+    
+  { 
+    path: 'role', 
     loadChildren: () => import('./role/role.module').then(m => m.RoleModule),
     canLoad: [RoleGuard]
   },
-  {
-    path: 'restatement',
-    loadChildren: () => import('./restatement/restatement.module').then(m => m.RestatementModule),
-    canLoad: [RestatementGuard]
+    
+  { 
+    path: 'templates', 
+    loadChildren: () => import('./templates/templates.module').then(m => m.TemplatesModule),
+    canLoad: [TemplateGuard]
   },
   {
     path: '**',
     component: PageNotFoundComponent
   }
+  
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
