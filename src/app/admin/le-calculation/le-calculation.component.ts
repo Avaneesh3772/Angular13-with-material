@@ -1,26 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import * as moment from 'moment';
 import { AgeCustomValidator } from 'src/app/app-validators/age.validator';
 import { PasswordValidator } from 'src/app/app-validators/password.validator';
 import { AdminConstants } from '../admin.constants';
-import { MomentDateAdapter, } from '@angular/material-moment-adapter';
-import { DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
+
 
 @Component({
   selector: 'app-le-calculation',
   templateUrl: './le-calculation.component.html',
   styleUrls: ['./le-calculation.component.css'],
   providers: [
-    {
-      provide: DateAdapter,
-      useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE]
-    },
-    {
-      provide: MAT_DATE_FORMATS,
-      useValue: MAT_DATE_FORMATS
-    }
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
   ],
 })
 export class LeCalculationComponent implements OnInit {
