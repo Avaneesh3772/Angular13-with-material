@@ -3,16 +3,16 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { AppInitializerDataService } from './app-services/app-initializer-data.service';
-
 import { AppComponent } from './app.component';
-import { DialogNotAuthorizedComponent } from './dialog-not-authorized/dialog-not-authorized.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { AuthTokenInterceptor } from './http-interceptor/auth-token.interceptor';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AngularMaterialModule } from './shared/AngularMaterial.module';
-import { SharedModule } from './shared/shared.module';
+import { DialogNotAuthorizedComponent } from './shared/components/dialog-not-authorized/dialog-not-authorized.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.interceptor';
+import { AngularMaterialModule } from './shared/modules/AngularMaterial.module';
+import { SharedModule } from './shared/modules/shared.module';
+import { AppInitializerDataService } from './shared/services/app-initializer-data.service';
+
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export function initApp(appInitializerDataService: AppInitializerDataService) {
@@ -27,16 +27,15 @@ export function initApp(appInitializerDataService: AppInitializerDataService) {
     PageNotFoundComponent, 
     HeaderComponent,
     FooterComponent,
-    DialogNotAuthorizedComponent
-       
+    DialogNotAuthorizedComponent       
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,    
+    AppRoutingModule,
     HttpClientModule,
     AngularMaterialModule,
-    SharedModule
+    SharedModule    
   ],
   providers: [
     {

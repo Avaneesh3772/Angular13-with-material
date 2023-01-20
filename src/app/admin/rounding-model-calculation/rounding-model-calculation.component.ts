@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AppCommonService } from 'src/app/app-services/app-common.service';
-import { DateUtils } from 'src/app/app-utilities/app.utilities';
+import { AppCommonService } from 'src/app/shared/services/app-common.service';
+import { DateUtils } from 'src/app/shared/utilities/app.utilities';
 import { AdminConstants } from '../admin.constants';
 import { TemplateDetails } from '../admin.models';
 import { AdminService } from '../admin.service';

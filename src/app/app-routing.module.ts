@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RestatementGuard } from './app-guard/restatement.guard';
-import { RoleGuard } from './app-guard/role.guard';
-import { AdminGuard } from './app-guard/admin.guard';
-import { TemplateGuard } from './app-guard/template.guard';
-import { DashboardGuard } from './app-guard/dashboard.guard';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardGuard } from './shared/guards/dashboard.guard';
+import { TemplateGuard } from './shared/guards/template.guard';
+import { AdminGuard } from './shared/guards/admin.guard';
+import { RoleGuard } from './shared/guards/role.guard';
+import { RestatementGuard } from './shared/guards/restatement.guard';
 
 const routes: Routes = [
   {

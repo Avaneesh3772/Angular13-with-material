@@ -7,8 +7,8 @@ import { MonthlyComponent } from './monthly/monthly.component';
 import { QuarterlyComponent } from './quarterly/quarterly.component';
 import { RoleAssignmentComponent } from './role-assignment/role-assignment.component';
 import { RoleDefinitionComponent } from './role-definition/role-definition.component';
-import { AngularMaterialModule } from '../shared/AngularMaterial.module';
-import { SharedModule } from '../shared/shared.module';
+import { AngularMaterialModule } from '../shared/modules/AngularMaterial.module';
+import { SharedModule } from '../shared/modules/shared.module';
 
 
 @NgModule({

@@ -4,20 +4,20 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DialogUserinfoComponent } from './dialog-userinfo/dialog-userinfo.component';
-import { AngularMaterialModule } from '../shared/AngularMaterial.module';
-import { SharedModule } from '../shared/shared.module';
+import { AngularMaterialModule } from '../shared/modules/AngularMaterial.module';
+import { SharedModule } from '../shared/modules/shared.module';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    DialogUserinfoComponent
+    DialogUserinfoComponent,    
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     AngularMaterialModule,
-    SharedModule,
+    SharedModule    
   ]
 })
 export class DashboardModule { }

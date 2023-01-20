@@ -6,8 +6,8 @@ import { InitiateAndDefineComponent } from './initiate-and-define/initiate-and-d
 import { RestatedReportsComponent } from './restated-reports/restated-reports.component';
 import { TrackComponent } from './track/track.component';
 import { TrackAndActionComponent } from './track-and-action/track-and-action.component';
-import { AngularMaterialModule } from '../shared/AngularMaterial.module';
-import { SharedModule } from '../shared/shared.module';
+import { AngularMaterialModule } from '../shared/modules/AngularMaterial.module';
+import { SharedModule } from '../shared/modules/shared.module';
 
 
 @NgModule({
@@ -21,8 +21,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RestatementRoutingModule,
-    AngularMaterialModule,
-    SharedModule
+    AngularMaterialModule, 
+    SharedModule   
   ]
 })
 export class RestatementModule { }

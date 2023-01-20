@@ -1,7 +1,7 @@
 import { ComponentType } from '@angular/cdk/portal';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { statusType } from '../app-constants/app.constants';
+import { statusType } from '../constants/app.constants';
 
 @Injectable({
   providedIn: 'root'

@@ -3,8 +3,8 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import * as moment from 'moment';
-import { AgeCustomValidator } from 'src/app/app-validators/age.validator';
-import { PasswordValidator } from 'src/app/app-validators/password.validator';
+import { AgeCustomValidator } from 'src/app/shared/validators/age.validator';
+import { PasswordValidator } from 'src/app/shared/validators/password.validator';
 import { AdminConstants } from '../admin.constants';
 
 

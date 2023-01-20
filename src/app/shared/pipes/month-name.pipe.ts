@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AppConstants } from '../app-constants/app.constants';
+import { AppConstants } from '../constants/app.constants';
 
 @Pipe({
   name: 'monthName'

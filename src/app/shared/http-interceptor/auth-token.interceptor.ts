@@ -7,7 +7,8 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 import { catchError, finalize, Observable, retry, throwError } from 'rxjs';
-import { AuthTokenService } from '../app-services/auth-token.service';
+import { AuthTokenService } from '../services/auth-token.service';
+
 
 @Injectable()
 export class AuthTokenInterceptor implements HttpInterceptor {

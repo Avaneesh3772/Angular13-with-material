@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppCommonService } from 'src/app/app-services/app-common.service';
+import { AppCommonService } from 'src/app/shared/services/app-common.service';
 import { RestatementConstants } from '../restatement.constants';
 import { CommentsList } from '../restatement.models';
 import { RestatementService } from '../restatement.service';

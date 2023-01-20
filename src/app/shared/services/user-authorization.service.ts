@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { WebApiService } from '../web-api.service';
+import { WebApiService } from 'src/app/web-api.service';
 
 @Injectable({
   providedIn: 'root'

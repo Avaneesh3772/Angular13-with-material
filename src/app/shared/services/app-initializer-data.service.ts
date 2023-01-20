@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AppConstants, AuthToken } from '../app-constants/app.constants';
+import { AppConstants, AuthToken } from '../constants/app.constants';
 import { AuthTokenService } from './auth-token.service';
 import { UserAuthorizationService } from './user-authorization.service';
 
