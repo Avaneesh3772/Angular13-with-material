@@ -45,7 +45,7 @@ export class TemplatesComponent implements OnInit {
       width: '600px',
     })
 
-    dialogRef.afterClosed().subscribe((result: {}) => {
+    dialogRef.afterClosed().subscribe((result: Object) => {
       console.log('postBody', result);
       if(result && Object.keys(result).length === 3) {
             this.createNewResource(result);

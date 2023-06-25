@@ -20,9 +20,9 @@ export class TrackComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private restatementService : RestatementService
     ){
-      this.activatedRoute.params.subscribe((params) => {
-        console.log('params', params);
-        this.getCommentID = params['id'];
+      this.activatedRoute.params.subscribe((paramsInfo) => {
+        console.log('paramsInfo=>', paramsInfo);
+        this.getCommentID = paramsInfo['id'];
       })
     }
 

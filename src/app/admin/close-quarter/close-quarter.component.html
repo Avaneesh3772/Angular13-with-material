@@ -59,7 +59,7 @@
 
     <div class="form-control">
       <input type="checkbox"  id="userSubscription" name="userSubscriptionInfo" [(ngModel)]="userDetails.userSubscription"
-      #userSubscriptionRef="ngModel" (change)="getFormStatus()">
+      #userSubscriptionRef="ngModel" (ngModelChange)="getFormStatus($event)">
       <label for="userSubscription">Send me promotional offers</label>
     </div>
 

@@ -36,7 +36,8 @@ export class CloseQuarterComponent implements OnInit {
     console.log('userDetails- ', this.userDetails);
   }
 
-  getFormStatus() {
+  getFormStatus($event: any) {
+    console.log('userSubscription Value is => ', $event)
     console.log('userForm- ', this.userForm)
   }
 

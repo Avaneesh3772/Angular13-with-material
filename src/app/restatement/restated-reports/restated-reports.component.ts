@@ -9,17 +9,19 @@ import { RestatementConstants } from '../restatement.constants';
 export class RestatedReportsComponent implements OnInit {
 
   public ageTotal: number = 0;
+  public showAge : boolean = false;
   public employeeInfo: any[] = RestatementConstants.employeeInfo;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  getTotalAge() {
     this.employeeInfo.forEach((item) => {
       this.ageTotal+=  item.age;
     })
+  }
+
+  getTotalAge() {
+    this.showAge = true;
     return this.ageTotal;
   }
 
